@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="How to delete your Bandpath IELTS account and what data is removed." />
+<title>Delete Your Account — Bandpath IELTS</title>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #F7F8FB;
+    --card: #FFFFFF;
+    --text-primary: #16181D;
+    --text-secondary: #565D6D;
+    --text-tertiary: #8A93A6;
+    --border: #E4E7EC;
+    --brand: #0B5FFF;
+    --brand-soft: #E9F0FF;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-primary);
+    line-height: 1.6;
+  }
+  header {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 24px;
+  }
+  .header-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .logo-mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(160deg, #3DCFEF 0%, var(--brand) 55%, #0B3FCC 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .brand-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  .doc-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px 28px;
+    box-shadow: 0 1px 3px rgba(16, 24, 40, 0.05);
+  }
+  h1 {
+    font-size: 26px;
+    line-height: 1.3;
+    margin: 0 0 6px;
+  }
+  .effective-date {
+    font-size: 14px;
+    color: var(--text-tertiary);
+    margin: 0 0 28px;
+  }
+  h2 {
+    font-size: 18px;
+    margin: 32px 0 12px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+  h2:first-of-type { border-top: none; padding-top: 0; }
+  p { margin: 0 0 14px; color: var(--text-secondary); font-size: 15px; }
+  ul, ol { margin: 0 0 14px; padding-left: 22px; color: var(--text-secondary); font-size: 15px; }
+  li { margin-bottom: 8px; }
+  strong { color: var(--text-primary); }
+  code {
+    background: var(--brand-soft);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+  a { color: var(--brand); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .callout {
+    background: var(--brand-soft);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--text-primary);
+    margin: 0 0 20px;
+  }
+  .warn {
+    background: #FFF6E5;
+    border: 1px solid #F5D68A;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--text-primary);
+    margin: 0 0 20px;
+  }
+  footer {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+    font-size: 13px;
+    color: var(--text-tertiary);
+    text-align: center;
+  }
+  @media (max-width: 480px) {
+    .doc-card { padding: 24px 18px; border-radius: 12px; }
+    h1 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+  <!--
+    Bandpath IELTS — public Account Deletion page (Google Play Data Safety
+    requirement: a web page describing account/data deletion that works
+    without needing to sign into the app).
+
+    Hosted on GitHub Pages (this repo, "bandpath-public"), alongside the
+    signup-confirmation page (index.html), password-recovery page
+    (reset-password/index.html), and Privacy Policy (privacy/index.html).
+    Purely static content, no login required to read.
+
+    Content reflects a direct audit of the Bandpath IELTS app source at the
+    time of writing (main app repo: Bandpath/ielts-prep):
+      - In-app navigation and confirmation-dialog wording is copied exactly
+        from hooks/useAccountDeletion.ts and app/(tabs)/profile.tsx.
+      - The "what gets deleted" list is copied from the real deletion
+        cascade in supabase/functions/_shared/deleteAccount.ts: deleting
+        the auth.users row cascades (via "on delete cascade" foreign keys)
+        through every user-owned table via profiles.id, and
+        revenuecat_webhook_events is cleaned up explicitly first since it
+        has no such FK. There is no retention/archival step in that code —
+        deletion is immediate and unconditional — so this page does not
+        claim our own systems retain anything after deletion.
+      - The subscription-cancellation guidance matches
+        lib/subscriptionManagementUrl.ts and the "Manage subscription"
+        button in app/subscription.tsx: deleting the app account never
+        cancels a Google Play subscription, which must be cancelled
+        separately via Play's own subscription management.
+  -->
+  <header>
+    <div class="header-inner">
+      <div class="logo-mark">B</div>
+      <span class="brand-name">Bandpath IELTS</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="doc-card">
+      <h1>Delete Your Account</h1>
+      <p class="effective-date">Bandpath IELTS (Bandpath IELTS Prep) — Android package <code>com.ieltsprep.app</code></p>
+
+      <div class="callout">
+        You can permanently delete your <strong>Bandpath IELTS</strong> account and all of your account data at any time, directly from within the app. This page explains exactly how, what gets deleted, and what doesn't.
+      </div>
+
+      <h2>1. How to delete your account in the app</h2>
+      <p>Deletion is available from two places in the app — both trigger the same deletion:</p>
+      <ol>
+        <li>Open the app and sign in.</li>
+        <li>Tap the <strong>Profile</strong> tab in the bottom navigation bar.</li>
+        <li>Scroll down and tap the red <strong>Delete account</strong> row (trash icon), near the bottom of the screen. It's also reachable from <strong>Help &amp; support</strong> on the same Profile screen.</li>
+        <li>A confirmation dialog titled <strong>"Delete account"</strong> appears, stating: <em>"This permanently deletes your profile, progress, and test history. This cannot be undone."</em> Tap <strong>Delete account</strong> again to confirm.</li>
+        <li>The app deletes your account and data, signs you out, and returns you to the sign-in screen.</li>
+      </ol>
+      <p>Deletion happens immediately once you confirm — there is no waiting period, and it cannot be undone or reversed after confirming.</p>
+
+      <h2>2. If you can't sign in to the app</h2>
+      <p>
+        If you're locked out of your account and can't complete the in-app steps above, email <a href="mailto:vinnakotabunny760@gmail.com">vinnakotabunny760@gmail.com</a> from the email address associated with your account and request deletion. We will verify the request and delete your account manually.
+      </p>
+
+      <h2>3. What gets deleted</h2>
+      <p>Deleting your account removes your authentication record and, because every one of the tables below is linked to it by a foreign key that cascades on deletion, every row tied to your account across our entire backend, including:</p>
+      <ul>
+        <li>Your profile (name, email, IELTS goal, target band, exam date, weakest skill, study preferences)</li>
+        <li>Your subscription/entitlement status</li>
+        <li>Every Reading, Listening, Writing, Speaking, and Full Mock attempt and score</li>
+        <li>Your submitted Writing essays, Speaking transcripts, and the AI feedback generated for them</li>
+        <li>Your AI Coach chat history</li>
+        <li>Your vocabulary/grammar progress, bookmarks, achievements, study streak, and XP</li>
+        <li>Your daily AI-usage log entries</li>
+        <li>Any pending RevenueCat webhook records tied to your account, which are removed as a separate explicit step before the account itself is deleted</li>
+      </ul>
+      <p>This is a complete, unconditional deletion — our backend has no "soft delete," archive, or recovery mechanism for a deleted account. Once confirmed, it cannot be undone.</p>
+
+      <h2>4. What is not deleted by this</h2>
+      <p>Deleting your Bandpath IELTS account does not reach data held by independent third parties outside our system:</p>
+      <ul>
+        <li><strong>Google Play</strong> keeps its own transaction and billing history for any purchase you made, under Google's own retention policy — this is Google's record of the purchase, not something stored in our database, and we have no ability to delete it.</li>
+        <li><strong>RevenueCat</strong> (our subscription-status provider) and any AI provider used to generate a response to a request you already sent (see our <a href="https://somasekhar-2004.github.io/bandpath-public/privacy/">Privacy Policy</a>) each retain data only under their own respective policies, not ours.</li>
+      </ul>
+      <p>
+        We do not have a separate retention period of our own for any account data — our systems do not keep a copy of anything listed in Section 3 after deletion completes.
+      </p>
+
+      <h2>5. Deleting your account does not cancel your Google Play subscription</h2>
+      <div class="warn">
+        <strong>Important:</strong> if you have an active Premium subscription, deleting your Bandpath IELTS account does <strong>not</strong> cancel it or stop future billing. Account deletion and subscription cancellation are handled by two separate systems.
+      </div>
+      <p>To stop being charged, cancel your subscription directly in Google Play, either:</p>
+      <ul>
+        <li>In the app: go to the Subscription screen and tap <strong>Manage subscription</strong>, which opens Google Play's own subscription management page for this app, or</li>
+        <li>Directly: open <a href="https://play.google.com/store/account/subscriptions?package=com.ieltsprep.app">https://play.google.com/store/account/subscriptions?package=com.ieltsprep.app</a> and cancel from there.</li>
+      </ul>
+      <p>We recommend cancelling your subscription in Google Play <em>before or after</em> deleting your account — either order works, but deleting the account alone will not stop billing.</p>
+
+      <h2>6. Questions</h2>
+      <p>
+        For anything else about account deletion or your data, email <a href="mailto:vinnakotabunny760@gmail.com">vinnakotabunny760@gmail.com</a>, or see our <a href="https://somasekhar-2004.github.io/bandpath-public/privacy/">Privacy Policy</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer>Bandpath IELTS — this page describes the app's actual account-deletion behavior as implemented; it is not a substitute for legal advice for any particular jurisdiction.</footer>
+</body>
+</html>
