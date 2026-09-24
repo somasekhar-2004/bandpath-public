@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Privacy Policy for the Bandpath IELTS mobile app." />
+<title>Privacy Policy — Bandpath IELTS</title>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #F7F8FB;
+    --card: #FFFFFF;
+    --text-primary: #16181D;
+    --text-secondary: #565D6D;
+    --text-tertiary: #8A93A6;
+    --border: #E4E7EC;
+    --brand: #0B5FFF;
+    --brand-soft: #E9F0FF;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-primary);
+    line-height: 1.6;
+  }
+  header {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 24px;
+  }
+  .header-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .logo-mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(160deg, #3DCFEF 0%, var(--brand) 55%, #0B3FCC 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .brand-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  .doc-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px 28px;
+    box-shadow: 0 1px 3px rgba(16, 24, 40, 0.05);
+  }
+  h1 {
+    font-size: 26px;
+    line-height: 1.3;
+    margin: 0 0 6px;
+  }
+  .effective-date {
+    font-size: 14px;
+    color: var(--text-tertiary);
+    margin: 0 0 28px;
+  }
+  h2 {
+    font-size: 18px;
+    margin: 32px 0 12px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+  h2:first-of-type { border-top: none; padding-top: 0; }
+  p { margin: 0 0 14px; color: var(--text-secondary); font-size: 15px; }
+  ul, ol { margin: 0 0 14px; padding-left: 22px; color: var(--text-secondary); font-size: 15px; }
+  li { margin-bottom: 8px; }
+  strong { color: var(--text-primary); }
+  a { color: var(--brand); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 16px;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    color: var(--text-secondary);
+  }
+  th { color: var(--text-primary); font-weight: 600; background: var(--brand-soft); }
+  .callout {
+    background: var(--brand-soft);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--text-primary);
+    margin: 0 0 20px;
+  }
+  .table-wrap { overflow-x: auto; }
+  footer {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+    font-size: 13px;
+    color: var(--text-tertiary);
+    text-align: center;
+  }
+  @media (max-width: 480px) {
+    .doc-card { padding: 24px 18px; border-radius: 12px; }
+    h1 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+  <!--
+    Bandpath IELTS — public Privacy Policy page.
+
+    Hosted on GitHub Pages (this repo, "bandpath-public"), alongside the
+    signup-confirmation page (index.html) and password-recovery page
+    (reset-password/index.html). This page is purely static content — it
+    never calls the Supabase API and requires no login to read, per its own
+    requirement to be readable by anyone (App Store / Play Store reviewers
+    included).
+
+    Content reflects an audit of the actual Bandpath IELTS app source at
+    the time of writing (main app repo: Bandpath/ielts-prep) — every claim
+    below describes something the current implementation actually does,
+    not a generic template. In particular: the app has no offline/demo
+    mode — every account is a real Supabase-backed account — and the only
+    third-party data processors are Supabase, the configured AI provider
+    (OpenAI, Anthropic, or Gemini — server-side only), and RevenueCat +
+    Google Play Billing for subscriptions. No analytics, crash-reporting,
+    or advertising SDK is present in the app's dependencies.
+  -->
+  <header>
+    <div class="header-inner">
+      <div class="logo-mark">B</div>
+      <span class="brand-name">Bandpath IELTS</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="doc-card">
+      <h1>Privacy Policy</h1>
+      <p class="effective-date">Effective date: September 24, 2026</p>
+
+      <div class="callout">
+        This policy describes what the <strong>Bandpath IELTS</strong> mobile app actually collects, stores, and does with your data, based on a direct review of the app's own source code — not a generic template.
+      </div>
+
+      <h2>1. Who this applies to</h2>
+      <p>
+        This Privacy Policy applies to the Bandpath IELTS mobile application (Android package <code>com.ieltsprep.app</code>), provided by the developer of Bandpath IELTS. If you have any question about this policy or your data, contact <a href="mailto:vinnakotabunny760@gmail.com">vinnakotabunny760@gmail.com</a>.
+      </p>
+
+      <h2>2. How the app handles your data</h2>
+      <p>
+        Bandpath IELTS requires a real account to use. Your data is stored in our backend (Supabase), in rows scoped to your account and isolated from other users by database-level access rules (Row Level Security) — no other user can read or write your data.
+      </p>
+
+      <h2>3. What we collect and why</h2>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Data</th><th>Why we collect it</th></tr>
+          <tr><td>Email address, display name</td><td>Account identity, sign-in, personalizing the app</td></tr>
+          <tr><td>IELTS target band, current band estimate, exam date, weakest skill, daily study-time preference</td><td>Building your study plan and progress dashboard</td></tr>
+          <tr><td>Practice/test attempts (Reading, Listening, Writing, Speaking) and Full Mock attempts and scores</td><td>Showing your progress, computing band estimates, powering the AI Coach's context</td></tr>
+          <tr><td>Written essay text and Speaking transcripts you submit for evaluation</td><td>Generating AI feedback on your Writing and Speaking</td></tr>
+          <tr><td>Vocabulary/grammar progress, bookmarks, achievements, study streak, XP</td><td>Progress tracking and in-app gamification</td></tr>
+          <tr><td>AI Coach chat messages</td><td>Continuing your coaching conversation and generating replies</td></tr>
+          <tr><td>Subscription plan and status</td><td>Determining Premium access</td></tr>
+          <tr><td>Daily AI-usage counts (which feature, success/failure, timestamp — not the content itself)</td><td>Enforcing free/premium daily usage limits, abuse prevention</td></tr>
+        </table>
+      </div>
+      <p>We do not collect data we don't have a specific, described use for above, and we do not sell your data to anyone.</p>
+
+      <h2>4. Third parties that actually process your data</h2>
+      <p>These are the only third-party services the app's code integrates with:</p>
+      <ul>
+        <li><strong>Supabase</strong> — our database, authentication, and server-side functions. It stores your account and app data, and runs server-side logic such as evaluation requests, usage-quota checks, account deletion, and subscription sync.</li>
+        <li><strong>AI provider</strong> — whichever of <strong>OpenAI</strong>, <strong>Anthropic</strong>, or <strong>Google (Gemini)</strong> is configured on our server (never more than one active at a time, and only configured server-side, never inside the app itself). When you submit a Writing essay or a Speaking recording for evaluation, ask the AI Coach a question, or request a study-plan suggestion, the relevant text — and, for Speaking, the transcribed text described in §5 — is sent to that provider solely to generate the response. See <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI's privacy policy</a>, <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic's privacy policy</a>, or <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a> for how each handles data it processes.</li>
+        <li><strong>RevenueCat</strong> — where configured, manages subscription/purchase state. Your Google Play purchase receipt and subscription status are shared with RevenueCat to validate your entitlement. See <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat's privacy policy</a>.</li>
+        <li><strong>Google Play Billing</strong> — the actual payment processor for any purchase. We never see or store your payment card details, only the resulting subscription status.</li>
+      </ul>
+      <p>We do not use any analytics, crash-reporting, or advertising SDK — none is present in the app.</p>
+
+      <h2>5. Microphone and audio (Speaking practice)</h2>
+      <p>
+        When you use a Speaking practice or Full Mock feature, the app records audio through your device's microphone <strong>only while you are actively recording a response you started</strong> — never in the background, and never before that explicit action. The recording is held temporarily on your device, then:
+      </p>
+      <ol>
+        <li>Uploaded, as part of a transcription request, to our server-side function, which forwards it to the configured AI provider to produce a text transcript.</li>
+        <li>That transcript — not the raw audio — is what gets evaluated for Speaking feedback.</li>
+      </ol>
+      <p>
+        We do not upload your audio to any persistent server-side storage — it is used for the single transcription request and is not separately archived by our own infrastructure. We cannot make the same guarantee about the configured AI provider's own retention of a request it processed; see its policy linked in §4. The temporary local recording remains in the app's local storage until you close/reinstall the app or your device reclaims that storage.
+      </p>
+
+      <h2>6. AI-generated feedback — limitations</h2>
+      <p>Every band score and piece of AI-generated feedback in this app (Writing, Speaking, AI Coach, study-plan suggestions) is an <strong>estimate for practice purposes</strong>, produced by a third-party AI model. It is:</p>
+      <ul>
+        <li>Not an official IELTS score.</li>
+        <li>Not affiliated with, endorsed by, or produced by IDP, the British Council, Cambridge Assessment English, or any organization that administers the real IELTS exam.</li>
+        <li>Not guaranteed accurate — AI evaluation can be wrong, inconsistent between runs, or miss nuance a human examiner would catch.</li>
+      </ul>
+
+      <h2>7. Local device storage</h2>
+      <p>
+        Independent of what's stored in your account, the app keeps a small amount of data only on your device: in-progress onboarding answers (so they survive an app restart mid-setup) and a draft of an essay you're writing (so it isn't lost if you leave the screen). This local data is never sent to us.
+      </p>
+
+      <h2>8. Notifications</h2>
+      <p>
+        If you enable them, the app schedules <strong>local, on-device</strong> reminders (daily study reminder, streak reminder, weekly summary, exam countdown) using your device's own notification system. These are not push notifications routed through a remote server or third-party push service, and no notification token is collected or sent to us. You can disable any notification category at any time in the app's settings, and the app works fully without notification permission granted.
+      </p>
+
+      <h2>9. Error logging</h2>
+      <p>
+        Our client and server code write diagnostic log lines (for example, "failed to sync subscription") for debugging. These go to standard platform/Supabase function logs, not a dedicated third-party log-aggregation or crash-reporting service, and are reviewed only by us for debugging purposes.
+      </p>
+
+      <h2>10. Data retention and deletion</h2>
+      <p>Your data is retained for as long as your account exists. You can permanently delete your account and all associated data at any time from <strong>Profile → Delete account</strong> or <strong>Help &amp; support → Delete account</strong> in the app. Deletion:</p>
+      <ul>
+        <li>Removes your authentication record and every database row tied to your account — profile, goals, subscription, band scores, streak/XP, every practice/mock/question attempt, bookmarks, Writing/Speaking submissions and feedback, AI Coach conversations, study plan, vocabulary/grammar progress, achievements, and AI-usage log entries.</li>
+        <li>Is immediate and irreversible — there is no "undo" once you confirm.</li>
+        <li>May not remove data already sent to and retained by a third-party AI provider under a request processed before deletion (see §4) — that is governed by that provider's own retention policy, outside our control.</li>
+        <li>We may retain minimal records where legally required (for example, tax/financial record-keeping for a completed subscription payment) for the period the law requires, even after account deletion.</li>
+      </ul>
+      <p>If you can no longer sign in to request deletion from within the app, email us at the address in §1 and we will process your deletion request manually.</p>
+
+      <h2>11. Children</h2>
+      <p>This app is not directed at children under 13, and we do not knowingly collect personal information from anyone under 13. If you believe a child has provided us data, contact us at the address in §1 and we will delete it.</p>
+
+      <h2>12. Your rights</h2>
+      <p>Depending on your jurisdiction, you may have rights to access, correct, export, or delete your data, and to object to certain processing. Deletion is available directly in the app (§10). For any other request, contact us at the address in §1.</p>
+
+      <h2>13. Changes to this policy</h2>
+      <p>We may update this policy as the app changes. Continued use of the app after an update means you accept the revised policy. The effective date at the top of this page reflects the most recent revision.</p>
+
+      <h2>14. Contact</h2>
+      <p>Questions about this policy or your data: <a href="mailto:vinnakotabunny760@gmail.com">vinnakotabunny760@gmail.com</a>.</p>
+    </div>
+  </main>
+
+  <footer>Bandpath IELTS — this policy is not a substitute for legal advice for any particular jurisdiction.</footer>
+</body>
+</html>
